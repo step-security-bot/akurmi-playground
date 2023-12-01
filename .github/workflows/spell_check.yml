@@ -4,6 +4,9 @@ on:
     paths:
       - '*.md'
 
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Spellcheck
