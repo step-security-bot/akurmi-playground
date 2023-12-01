@@ -1,6 +1,9 @@
 name: INT Outbound Calls
 on:
   workflow_dispatch:
+permissions:
+  contents: read
+
 jobs:
   build:
     name: IntOutboundCalls
