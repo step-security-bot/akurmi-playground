@@ -6,13 +6,11 @@ jobs:
     name: Deploy2
     runs-on: ubuntu-latest
     steps:
-    
-      # Checkout code
-      - run: sleep 2
       - name: HardenRunner
         uses: step-security/harden-runner@int
         with:
           egress-policy: audit
+      - run: sleep 20
       - name: Code Checkout
         uses: actions/checkout@v2
         with:
