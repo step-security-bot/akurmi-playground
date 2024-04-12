@@ -1,4 +1,4 @@
-name: Sample Workflow Main
+name: Sample Workflow RC
 on:
   workflow_dispatch:
 jobs:
