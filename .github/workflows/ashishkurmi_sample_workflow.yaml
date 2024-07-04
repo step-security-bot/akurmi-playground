@@ -6,13 +6,18 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
-        uses: ashishkurmi/harden-runner@main
+        uses: ashishkurmi/harden-runner@a54b671d11d6e74fb1a6e942a2ffe92df7f6d433 # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -30,20 +35,25 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
   build1:
     name: build1
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
-        uses: ashishkurmi/harden-runner@main
+        uses: ashishkurmi/harden-runner@a54b671d11d6e74fb1a6e942a2ffe92df7f6d433 # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -61,20 +71,25 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
   build2:
     name: build2
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
-        uses: ashishkurmi/harden-runner@main
+        uses: ashishkurmi/harden-runner@a54b671d11d6e74fb1a6e942a2ffe92df7f6d433 # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -92,20 +107,25 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
   build4:
     name: build4
     runs-on: ubuntu-latest
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@17d0e2bd7d51742c71671bd19fa12bdc9d40a3d6 # v2.8.1
+        with:
+          egress-policy: audit
+
       - name: HardenRunner
-        uses: ashishkurmi/harden-runner@main
+        uses: ashishkurmi/harden-runner@a54b671d11d6e74fb1a6e942a2ffe92df7f6d433 # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -123,7 +143,7 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
 

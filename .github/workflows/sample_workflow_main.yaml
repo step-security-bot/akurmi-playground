@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: step-security/harden-runner@main
+        uses: step-security/harden-runner@6d3c2fe731c8f225990c8018cb71c337c0d9dfcd # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -30,7 +30,7 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
 
@@ -39,12 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: step-security/harden-runner@main
+        uses: step-security/harden-runner@6d3c2fe731c8f225990c8018cb71c337c0d9dfcd # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -62,7 +62,7 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
 
@@ -71,12 +71,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: step-security/harden-runner@main
+        uses: step-security/harden-runner@6d3c2fe731c8f225990c8018cb71c337c0d9dfcd # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -94,7 +94,7 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
       
@@ -104,12 +104,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: step-security/harden-runner@main
+        uses: step-security/harden-runner@6d3c2fe731c8f225990c8018cb71c337c0d9dfcd # main
         with:
           egress-policy: audit
       - run: sleep 30
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -127,6 +127,6 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
