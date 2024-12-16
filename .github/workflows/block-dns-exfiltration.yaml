@@ -1,4 +1,4 @@
-name: DNS Exfiltration Prevention With Harden-Runner
+name: Block DNS Exfiltration With Harden-Runner
 on:
   workflow_dispatch:
 jobs:
