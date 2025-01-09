@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: ashishkurmi/harden-runner@main
+        uses: ashishkurmi/harden-runner@v2
         with:
           egress-policy: audit
       - run: sleep 30
