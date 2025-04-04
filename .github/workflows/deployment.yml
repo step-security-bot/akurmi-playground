@@ -50,19 +50,24 @@ jobs:
     environment: production
 
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@c6295a65d1254861815972266d5933fd6e532bdf # v2.11.1
+      with:
+        egress-policy: audit
+
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
     - name: Login to ECR
       id: ecr
-      uses: elgohr/ecr-login-action@v3
+      uses: elgohr/ecr-login-action@370db6fb22395fcaaaaff429b1c289e82d41b868 # v3
       with:
         access_key: ${{ secrets.AWS_ACCESS_KEY }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         region: ${{ secrets.AWS_REGION }}
 
     - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@v5
+      uses: elgohr/Publish-Docker-Github-Action@eb53b3ec07136a6ebaed78d8135806da64f7c7e2 # v5
       env:
         COMMIT_HASH: ${{ github.sha }}
         BRANCH: ${{ github.ref_name }}
