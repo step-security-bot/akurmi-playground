@@ -7,12 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: HardenRunner
-        uses: step-security/harden-runner@main
+        uses: step-security/harden-runner@617de1d11dea286f7a53941812f4667f646e72da # main
         with:
           egress-policy: audit
 
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5 # v2.7.0
         with:
           fetch-depth: 2
 
@@ -30,7 +30,7 @@ jobs:
         run: "curl attacker.com  --connect-timeout 5  || true"
 
       - name: 1 Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
+        uses: ashishkurmi/hello-action@c5327f7d9d31e29e58e788cb3c2727f773b3d0c4 # main
         env:
           SLEEPINSECONDS: 5
 
